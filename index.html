@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="news.css">
+    <title>News Listing From TheGuardian Open Platform</title>
+</head>
+<body>
+
+<noscript>
+    Your browser does not support javascript, that means you are using an ancient, pre-historic browser.
+    Please update your browser to see the content of this page from live server. This content shown here is static, so might be very old
+</noscript>
+
+<script id="newsTableContent" type="text/template" class="template">
+    <table class="table">
+        <% _.each( rc.results, function( listItem, index ){ %>
+        <tr>
+            <td><%- index+1 %></td>
+            <td><%- listItem.webPublicationDate.slice(0,10) %></td>
+            <td><a href="<%- listItem.webUrl %>" target="_blank"><%- listItem.webTitle %></a></td>
+        </tr>
+        <% }); %>
+    </table>
+</script>
+
+
+<div class="fluid-wrap">
+    <div class="topbar"><h3>News Listing From TheGuardian Open Platform</h3></div>
+    <img src="http://static.guim.co.uk/static/60ed206dbccc8b808a7792d47862f9cfb7cd3d67/common/images/logos/the-guardian/titlepiece.gif">
+    <div class="container">
+        <div class="panel panel-default">
+            <ul class="nav nav-tabs" data-tabs="tabs">
+                <li class="active"><a id="news" data-toggle="tab" href="#newsjsoff" class="newslist">UK News</a></li>
+                <li><a id="football" data-toggle="tab" href="#footballjsoff" class="newslist">Football</a></li>
+                <li><a id="travel" data-toggle="tab" href="#traveljsoff" class="newslist">Travel</a></li>
+            </ul>
+
+            <div id="newscontent" class="tab-content">
+                <div id="newsjsoff" class="tab-pane active">
+                    <table class="table">
+                        <tr>
+                            <td>1</td>
+                            <td>2016-04-12</td>
+                            <td><a href="http://www.theguardian.com/higher-education-network/2016/apr/12/four-reasons-a-brexit-would-be-bad-news-for-uk-universities" target="_blank">Four reasons a Brexit would be bad news for UK universities</a></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>2015-11-20</td>
+                            <td><a href="http://www.theguardian.com/media/2015/nov/20/twitter-raids-sky-for-new-head-of-uk-news" target="_blank">Twitter raids Sky for new head of UK news</a></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>2016-03-10</td>
+                            <td><a href="http://www.theguardian.com/media/2016/mar/10/bbc-news-most-trusted-source-for-more-than-half-of-people-in-the-uk" target="_blank">BBC News most trusted source for more than half of people in the UK</a></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>2015-08-04</td>
+                            <td><a href="http://www.theguardian.com/media/2015/aug/04/news-uk-to-distribute-london-weeklies" target="_blank">News UK to distribute London weeklies</a></td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>2016-02-19</td>
+                            <td><a href="https://www.theguardian.com/science/political-science/2016/feb/19/europes-framework-for-clinical-trials-is-good-news-for-uk-scientists-and-patients" target="_blank">Europe's framework for clinical trials is good news for UK scientists and patients</a></td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="footballjsoff" class="tab-pane">
+                    <table class="table">
+                        <tr>
+                            <td>1</td>
+                            <td>2016-04-30</td>
+                            <td><a href="http://www.theguardian.com/global/football-league-blog/2016/apr/30/football-league-your-thoughts-sheffield-wednesday" target="_blank">Football League: your thoughts</a></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>2016-05-07</td>
+                            <td><a href="https://www.theguardian.com/football/football-league-blog/2016/may/07/football-league-your-thoughts" target="_blank">Football League: your thoughts</a></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>2016-04-23</td>
+                            <td><a href="https://www.theguardian.com/football/football-league-blog/2016/apr/23/football-league-your-thoughts-brighton-wigan-york" target="_blank">Football League: your thoughts</a></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>2016-04-16</td>
+                            <td><a href="https://www.theguardian.com/football/blog/2016/apr/16/football-league-your-thoughts-blog" target="_blank">Football League: your thoughts</a></td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>2016-04-09</td>
+                            <td><a href="https://www.theguardian.com/football/football-league-blog/2016/apr/09/football-league-your-thoughts" target="_blank">Football League: your thoughts</a></td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="traveljsoff" class="tab-pane">
+                    <table class="table">
+                        <tr>
+                            <td>1</td>
+                            <td>2016-03-22</td>
+                            <td><a href="http://www.theguardian.com/travel/2016/mar/22/brussels-attacks-advice-for-travellers" target="_blank">Brussels travel advice</a></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>2016-05-27</td>
+                            <td><a href="http://www.theguardian.com/travel/2016/may/27/readers-travel-photography-competition-june" target="_blank">Readers' travel photography competition: June</a></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>2016-05-19</td>
+                            <td><a href="http://www.theguardian.com/travel/2016/may/19/montreal-restaurants-cycle-music-readers-tips" target="_blank">Montreal highlights: readers' travel tips</a></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>2016-04-29</td>
+                            <td><a href="http://www.theguardian.com/travel/2016/apr/29/readers-travel-photography-competition-may" target="_blank">Readers' travel photography competition: May</a></td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>2016-03-30</td>
+                            <td><a href="http://www.theguardian.com/travel/2016/mar/30/readers-travel-photography-competition-april" target="_blank">Readers' travel photography competition: April</a></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-container"><span>Written By Dalia Banerjee</span></div>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
+<script src="news.js"></script>
+</body>
+</html>

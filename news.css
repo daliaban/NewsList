@@ -1,0 +1,61 @@
+html, body{
+    height: 100%;
+}
+.fluid-wrap {
+    max-width: 940px;
+    margin: 0 auto;
+    padding: 0 10px;
+    position: relative;
+    min-height: 100%;
+}
+.container {
+    max-width: 940px;
+}
+
+.panel {
+    margin-top: 15px;
+}
+
+.topbar {
+    background: #ededed;
+    color: darkblue;
+    font-size: 12px;
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: georgia, serif;
+    margin: 0;
+}
+
+.newslist {
+    text-decoration: none;
+}
+
+.nav-tabs li.active a {
+    background-color: #ededed !important;
+}
+
+.footer {
+    background: #ededed;
+    color: darkblue;
+    bottom: 0;
+    position:absolute;
+    text-align: left;
+    font-size: 12px;
+    width: 100%;
+}
+
+.footercontainer {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.table{
+    margin-bottom: 0px;
+}
+
